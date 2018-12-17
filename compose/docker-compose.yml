@@ -47,7 +47,6 @@ services:
     deploy:
       restart_policy:
         condition: on-failure
-
   kong:
     image: "${KONG_DOCKER_TAG:-kong:latest}"
     user: "${KONG_USER:-kong}"
@@ -83,7 +82,6 @@ services:
     deploy:
       restart_policy:
         condition: on-failure
-    
   db:
     image: postgres:9.5
     environment:
